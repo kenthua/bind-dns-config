@@ -5,6 +5,25 @@ Source
 
 install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/configure-dns-bind-server-on-centos-7-rhel-7.html#axzz3ZCAxA2oC
 
+Install Digest
+--------------
+
+Install Bind
+'yum install bind bind-utils'
+
+Modify config files
+
+Update dns resolution /etc/resolv.conf or ifcfg-ethx DNS reference
+
+It appears named service needs a restart for any config/db change based on current configuration
+'systemctl restart named.service'
+
+To do a quick test - should resolve correct IP
+'dig www.example.com' 
+
+Testing reverse IP dns lookup
+'dig -x 10.211.55.2'
+
 
 Config Files
 ------------

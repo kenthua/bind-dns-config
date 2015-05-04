@@ -11,4 +11,4 @@ $TTL 86400
 ;Reverse lookup for Name Server
 8        IN  PTR     dns.example.com.
 
-100	IN	PTR	www.example.com.
+2	IN	PTR	www.example.com.
