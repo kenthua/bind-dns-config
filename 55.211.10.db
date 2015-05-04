@@ -1,0 +1,14 @@
+$TTL 86400
+@   IN  SOA     dns.example.com. root.example.com (
+2014112511  ;Serial
+3600        ;Refresh
+1800        ;Retry
+604800      ;Expire
+86400       ;Minimum TTL
+)
+;Name Server Information
+@ IN  NS      dns.example.com.
+;Reverse lookup for Name Server
+8        IN  PTR     dns.example.com.
+
+100	IN	PTR	www.example.com.
