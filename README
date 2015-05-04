@@ -1,0 +1,30 @@
+# BIND DNS Configuration sample, for example.com and wildcard example
+
+Source
+------
+
+install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/configure-dns-bind-server-on-centos-7-rhel-7.html#axzz3ZCAxA2oC
+
+
+Config Files
+------------
+
+named.conf - location /etc
+
+commented out listen-on port 53... & listen-on-v6 port 53... in force bind to listen on all interfaces
+
+added allow-query 10.211.55.0/24 so that local ip's can query
+
+added forwarders 8.8.8.8 to query google dns for anything not defined in local dns (i.e. example.com)
+
+
+
+fwd.example.com - location /var/named
+
+TTL @ 300
+ose3-master 300 IN A 10.211.55.36
+*.cloudapps 300	IN A 10.211.55.36
+
+55.211.10.db	- location /var/named
+
+
