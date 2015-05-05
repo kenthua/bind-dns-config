@@ -7,34 +7,38 @@ install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/config
 
 Run With Docker
 ---------------
-'docker build -t <tag_name> .'
+`docker build -t <tag_name> .`
 
-'docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>'
+`docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>`
 
---privileged mode for SELinux
--d for detached
--p port mapping 53/udp
--v mount volume of host for cgroup (to run systemd)
+	some code here
+	some code there
+	test
+
+* --privileged mode for SELinux
+* -d for detached
+* -p port mapping 53/udp
+* -v mount volume of host for cgroup (to run systemd)
 
 
 Install Digest
 --------------
 
 Install Bind
-'yum install bind bind-utils'
+`yum install bind bind-utils`
 
 Modify config files
 
 Update dns resolution /etc/resolv.conf or ifcfg-ethx DNS reference
 
 It appears named service needs a restart for any config/db change based on current configuration
-'systemctl restart named.service'
+`systemctl restart named.service`
 
 To do a quick test - should resolve correct IP
-'dig www.example.com' 
+`dig www.example.com`
 
 Testing reverse IP dns lookup
-'dig -x 10.211.55.2'
+`dig -x 10.211.55.2`
 
 
 Config Files
