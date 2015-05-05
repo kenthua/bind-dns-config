@@ -11,10 +11,6 @@ Run With Docker
 
 `docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>`
 
-	some code here
-	some code there
-	test
-
 * --privileged mode for SELinux
 * -d for detached
 * -p port mapping 53/udp
