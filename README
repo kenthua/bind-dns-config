@@ -5,6 +5,18 @@ Source
 
 install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/configure-dns-bind-server-on-centos-7-rhel-7.html#axzz3ZCAxA2oC
 
+Run With Docker
+---------------
+'docker build -t <tag_name> .'
+
+'docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>'
+
+--privileged mode for SELinux
+-d for detached
+-p port mapping 53/udp
+-v mount volume of host for cgroup (to run systemd)
+
+
 Install Digest
 --------------
 
