@@ -1,6 +1,6 @@
 ;dns.example.com - hostname of dns server, root is just there may not be necessary
 $TTL 86400
-@ 	IN SOA	dns.example.com. root.example.com (
+@ 	IN SOA	dns.example.com. root.example.com. (
 20150504;Serial
 3600	;Refresh
 1800	;Retry
