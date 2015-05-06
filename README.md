@@ -7,9 +7,9 @@ install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/config
 
 Run With Docker
 ---------------
-`docker build -t <tag_name> .`
 
-`docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>`
+	docker build -t <tag_name> .
+	docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>
 
 * --privileged mode for SELinux
 * -d for detached
@@ -43,6 +43,14 @@ To do a quick test - should resolve correct IP
 Testing reverse IP dns lookup
 `dig -x 10.211.55.2`
 
+Check Config Files
+------------------
+To check the bind config file
+	named-checkconf /etc/named.conf
+
+To check each zone file
+	named-checkzone /var/named/fwd.example.com.zone
+	named-checkzone /var/named/55.211.10.zone
 
 Config Files
 ------------
@@ -59,7 +67,7 @@ added forwarders 8.8.8.8 to query google dns for anything not defined in local d
 
 fwd.example.com - location /var/named
 
-TTL @ 300
+TTL @ 300 override default defined in zone
 ose3-master 300 IN A 10.211.55.36
 *.cloudapps 300	IN A 10.211.55.36
 
