@@ -3,7 +3,11 @@
 Source
 ------
 
-install instructions: http://www.itzgeek.com/how-tos/linux/centos-how-tos/configure-dns-bind-server-on-centos-7-rhel-7.html#axzz3ZCAxA2oC
+install instructions: 
+
+http://www.itzgeek.com/how-tos/linux/centos-how-tos/configure-dns-bind-server-on-centos-7-rhel-7.html#axzz3ZCAxA2oC
+
+https://github.com/blackyboy/RedHat-Centos-Common-Stuffs/blob/master/Step-by-Step-how-to-setup-a-DNS-Server-in-RHEL-6.2-6.4-6.5-Using-Bind.md
 
 Run With Docker
 ---------------
