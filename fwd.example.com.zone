@@ -1,4 +1,4 @@
-
+;dns.example.com - hostname of dns server, root is just there may not be necessary
 $TTL 86400
 @ 	IN SOA	dns.example.com. root.example.com (
 20150504;Serial
@@ -11,8 +11,8 @@ $TTL 86400
 @	IN 	NS	dns.example.com.
 ;IP address of Name Server
 dns	IN	A	10.211.55.44
-
+;test entry
 www	IN	A	10.211.55.2
-
+;300 TTL will override 86400 in default
 ose3-master 300	IN	A	10.211.55.36
 *.cloudapps 300 	IN	A	10.211.55.36

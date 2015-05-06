@@ -16,6 +16,13 @@ Run With Docker
 * -p port mapping 53/udp
 * -v mount volume of host for cgroup (to run systemd)
 
+Enable UDP 53 Firewall if needed
+--------------------------------
+For iptables,
+Need to this firewall statement before any INPUT accept/reject statement
+	
+	/etc/sysconfig/iptables
+	-A INPUT -p udp -m udp --dport 53 -j ACCEPT
 
 Install Digest
 --------------
