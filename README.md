@@ -46,9 +46,11 @@ Testing reverse IP dns lookup
 Check Config Files
 ------------------
 To check the bind config file
+
 	named-checkconf /etc/named.conf
 
 To check each zone file
+
 	named-checkzone /var/named/fwd.example.com.zone
 	named-checkzone /var/named/55.211.10.zone
 
