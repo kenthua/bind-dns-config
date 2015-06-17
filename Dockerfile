@@ -1,6 +1,6 @@
 FROM centos:latest
 #FROM registry.access.redhat.com/rhel:latest
-MAINTAINER khua@redhat.com
+MAINTAINER kent@pitchdarkice.com 
 
 ADD named.conf /etc/named.conf
 ADD fwd.example.com.zone /var/named/fwd.example.com.zone
