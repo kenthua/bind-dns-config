@@ -3,10 +3,11 @@ FROM centos:latest
 MAINTAINER kent@pitchdarkice.com 
 
 ADD named.conf /etc/named.conf
-ADD fwd.example.com.zone /var/named/fwd.example.com.zone
+ADD cloudapps.example.com.db /var/named/dynamic/cloudapps.example.com.db
+ADD example.com.db /var/named/dynamic/example.com.db
 
 RUN yum -y update; yum clean all
-RUN yum -y install bind bind-utils; systemctl enable named.service
+RUN yum -y install bind bind-utils; yum clean all; systemctl enable named.service
 
 EXPOSE 53/udp
 CMD ["/usr/sbin/init"]
