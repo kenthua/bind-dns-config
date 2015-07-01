@@ -55,8 +55,8 @@ To check the bind config file
 
 To check each zone file
 
-	named-checkzone /var/named/fwd.example.com.zone
-	named-checkzone /var/named/55.211.10.zone
+	named-checkzone -d example.com /var/named/fwd.example.com.zone
+	named-checkzone -d example.com /var/named/55.211.10.zone
 
 Config Files
 ------------
