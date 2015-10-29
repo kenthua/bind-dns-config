@@ -13,7 +13,7 @@ Run With Docker
 ---------------
 
 	docker build -t <tag_name> .
-	docker run --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup <tag_name>
+	docker run --name=dns-bind --privileged -d -p 53:53/udp -v /sys/fs/cgroup:/sys/fs/cgroup --restart=always <tag_name>
 
 * --privileged mode for SELinux
 * -d for detached
